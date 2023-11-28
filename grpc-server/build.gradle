@@ -1,7 +1,8 @@
 plugins {
     id 'java'
 //    id 'org.springframework.boot' version '3.2.0'
-//    id 'io.spring.dependency-management' version '1.1.4'
+    id 'org.springframework.boot' version '2.6.0'
+    id 'io.spring.dependency-management' version '1.1.4'
 }
 
 group = 'org.example'
@@ -17,13 +18,22 @@ dependencies {
 
     // grpc
     implementation project(path: ':') // Reference to parent project
-    implementation 'net.devh:grpc-server-spring-boot-starter:2.14.0.RELEASE' // gRPC server dependence
+    implementation 'net.devh:grpc-server-spring-boot-starter:2.14.0.RELEASE'
+//    implementation 'org.springframework.boot:spring-boot-starter:3.1.4'
+
 
 //    // spring-boot web + jdbc api for psql + psql driver
-//    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-//    implementation 'org.springframework.boot:spring-boot-starter-web'
-//    runtimeOnly 'org.postgresql:postgresql'
-//    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//    implementation 'org.postgresql:postgresql'
+//    runtimeOnly 'org.postgresql:postgresql:42.6.0'
+//    implementation 'org.springframework.boot:spring-boot-starter-jdbc:3.1.2'
+//    implementation 'org.springframework.boot:spring-boot-starter-web:3.1.4'
+//    testImplementation 'org.springframework.boot:spring-boot-starter-test:3.1.4'
+
+    runtimeOnly 'org.postgresql:postgresql'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 test {
