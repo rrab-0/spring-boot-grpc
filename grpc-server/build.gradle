@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+//    id 'org.springframework.boot' version '3.2.0'
+//    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    // grpc
+    implementation project(path: ':') // Reference to parent project
+    implementation 'net.devh:grpc-server-spring-boot-starter:2.14.0.RELEASE' // gRPC server dependence
+
+//    // spring-boot web + jdbc api for psql + psql driver
+//    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+//    implementation 'org.springframework.boot:spring-boot-starter-web'
+//    runtimeOnly 'org.postgresql:postgresql'
+//    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}
