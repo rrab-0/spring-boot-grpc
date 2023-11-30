@@ -15,3 +15,17 @@ based on https://blog.shiftasia.com/introduction-grpc-and-implement-with-spring-
 - https://blog.shiftasia.com/introduction-grpc-and-implement-with-spring-boot/
 - https://grpc-ecosystem.github.io/grpc-spring/
 - https://github.com/grpc-ecosystem/grpc-spring
+
+# Different response in one field (details field) example
+
+### Ownunit Response
+
+![Ownunit Response](./assets/ownunit-response.png)
+
+### Radar Response
+
+![Radar Response](./assets/radar-response.png)
+
+### ADSB Response
+
+![ADSB Response](./assets/adsb-response.png)

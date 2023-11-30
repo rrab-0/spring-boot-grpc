@@ -4,10 +4,6 @@
 package org.example.grpc;
 
 /**
- * <pre>
- * Request payload
- * </pre>
- *
  * Protobuf type {@code org.example.grpc.HelloRequest}
  */
 public final class HelloRequest extends
@@ -284,10 +280,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * Request payload
-   * </pre>
-   *
    * Protobuf type {@code org.example.grpc.HelloRequest}
    */
   public static final class Builder extends

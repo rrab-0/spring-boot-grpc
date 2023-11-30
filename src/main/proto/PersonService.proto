@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+// Specify the package we want to use for our generated Java classes.
+package org.example.grpc.person;
+
+// Everything will be generated in individual files.
+// By default, the compiler generates all the Java code in a single Java file.
+option java_multiple_files = true;
+
+message CreatePersonRequest {
+  string id = 1;
+}
+
+message Ownunit {
+  string a = 1;
+}
+
+message Radar {
+  string b = 1;
+}
+
+message Adsb {
+  string c = 1;
+}
+
+message Detail {
+  oneof type {
+    Ownunit ownunit = 1;
+    Radar radar = 2;
+    Adsb adsb = 3;
+  }
+}
+
+message CreatePersonResponse {
+  string message = 1;
+  string id = 2;
+  Detail details = 3;
+}
+
+service PersonService {
+  rpc createPerson(CreatePersonRequest) returns (CreatePersonResponse);
+}
